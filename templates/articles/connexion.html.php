@@ -1,22 +1,24 @@
-<article class="contact">
-    <h2>
-        Connexion
-    </h2>
-    <div>
-        <form id="form" action="index.php?controller=users&task=connexion" method="post">
-            <input type="email" placeholder="E-mail" name="mail" id="">
-            <input type="password" placeholder="Mot de passe" name="password" id="">
-    </div>
-    <div class="spaceButton">
-        <button type="submit" name="connexion">Connexion</button>
-        </form>
-        <button name='inscription'><a href="index.php?controller=page&task=inscription"> Inscription</a></button>
-    </div>
+<section>
+    <article class="contact">
+        <h2>
+            Connexion
+        </h2>
+        <div>
+            <form id="form" action="index.php?controller=users&task=connexion" method="post">
+                <input type="email" placeholder="E-mail" name="mail" id="">
+                <input type="password" placeholder="Mot de passe" name="password" id="">
+        </div>
+        <div class="spaceButton">
+            <button class="bn633-hover bn26" type="submit" name="connexion">Connexion</button>
+            </form>
+            <button class="bn633-hover bn26" name='inscription'><a href="index.php?controller=page&task=inscription"> Inscription</a></button>
+        </div>
 
-    <h3 id="erreur"></h3>
+        <h3 id="erreur"></h3>
 
 
-</article>
+    </article>
+</section>
 
 <script>
     document.getElementById('form').addEventListener('submit', event => {

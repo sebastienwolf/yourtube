@@ -1,26 +1,29 @@
-<article class="contact">
-    <h2>
-        Inscription
-    </h2>
-    <div>
-        <form id="form" action="" method="post">
-            <!-- <label for=""><b>Nom :</b></label> -->
-            <input type="text" name="nom" placeholder="Nom">
-            <!-- <label for=""><b>Prénom :</b></label> -->
-            <input type="text" name="prenom" placeholder="Prénom">
-            <!-- <label for=""><b>Email :</b></label> <br> -->
-            <input type="email" name="mail" placeholder="Mail">
-            <!-- <label for=""><b>Pseudo :</b></label> -->
-            <input type="text" name="userPseudo" placeholder="Pseudo">
-            <!-- <label for=""><b>Mot de Passe :</b></label> -->
-            <input type="password" name="password" placeholder="Password">
+<section class="form">
+    <article class="contact">
+        <h2>
+            Inscription
+        </h2>
+        <div>
+            <form id="form" action="" method="post">
+                <!-- <label for=""><b>Nom :</b></label> -->
+                <input type="text" name="nom" placeholder="Nom">
+                <!-- <label for=""><b>Prénom :</b></label> -->
+                <input type="text" name="prenom" placeholder="Prénom">
+                <!-- <label for=""><b>Email :</b></label> <br> -->
+                <input type="email" name="mail" placeholder="Mail">
+                <!-- <label for=""><b>Pseudo :</b></label> -->
+                <input type="text" name="userPseudo" placeholder="Pseudo">
+                <!-- <label for=""><b>Mot de Passe :</b></label> -->
+                <input type="password" name="password" placeholder="Password">
 
-            <button type="submit" class="creer" name="creer"></button>
-        </form>
-        <h3 id="erreur"></h3>
-    </div>
+                <button type="submit" class="creer bn633-hover bn26" name="creer">Créer</button>
+            </form>
+            <h3 id="erreur"></h3>
+        </div>
 
-</article>
+    </article>
+</section>
+
 
 <script>
     document.getElementById('form').addEventListener('submit', event => {

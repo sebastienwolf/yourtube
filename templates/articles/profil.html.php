@@ -6,7 +6,7 @@
 <section class="profil">
     <h2>Votre profil :</h2>
     <article>
-        <img src="" alt="">
+        <img src="./upload/profil.webp" alt="">
         <div id="profilUser">
             <p><b>Nom :</b> <?= $_SESSION['nom'] ?></p>
             <p><b>Prenom :</b> <?= $_SESSION['prenom'] ?></p>
@@ -14,7 +14,7 @@
             <p><b>Pseudo :</b> <?= $_SESSION['pseudo'] ?></p>
             <p><b>Mot de passe :</b> *******</p>
             <p><b>Votre grade :</b> <?= $_SESSION['userType'] ?></p>
-            <button id="modifier">Modifier</button>
+            <button class="bn632-hover bn25" id="modifier">Modifier</button>
         </div>
     </article>
 
@@ -37,8 +37,8 @@
         <label for=""><b>Mot de Passe :</b></label>
         <input type="password" name="password" placeholder="Password">
 
-        <button type="submit" class="creer" name="creer">Valider les modifications</button>
-        <button id="retour">Retour</button>
+        <button type="submit" class="creer bn632-hover bn25" name="creer">Valider</button>
+        <button class="bn632-hover bn25" id="retour">Retour</button>
     </form>
 </div>
 <script>

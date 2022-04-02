@@ -1,20 +1,20 @@
-<section class="index">
+<section id="index">
     <?php
     foreach ($articles as $article) {
     ?>
 
-
         <article>
             <?php if ($article['Type'] == "image") { ?>
-                <img src="./upload/<?= $article['imageArticle'] ?>" class="card__image" alt="" />
+                <img src="./upload/<?= $article['imageArticle'] ?>" />
             <?php } else { ?>
                 <video controls src="upload/<?= $article['imageArticle'] ?>">La vidéo n'a pas pu ce charger</video>
             <?php } ?>
             <div>
-                <h3 class="card__title"><?= $article['titre'] ?></h3>
-                <p><?= $article['dateE'] ?></p>
-                <p>auteur : <?= $article['pseudo'] ?> &#149; catégorie : <?= $article['theme'] ?></p>
-                <a href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a>
+                <h3><?= $article['titre'] ?></h3>
+                <p><?= $article['dateE'] ?><br>
+                    auteur : <?= $article['pseudo'] ?> &#149; catégorie : <?= $article['theme'] ?> <br>
+                    <a href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a>
+                </p>
             </div>
         </article>
 

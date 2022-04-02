@@ -1,5 +1,5 @@
-<section id="addArticle">
-    <div class="" id="">
+<section class="form">
+    <article class="" id="">
 
         <form id="articleAdd" action="" method="post" enctype="multipart/form-data">
             <h2>Ajouter une vidéo</h2>
@@ -21,15 +21,15 @@
             </select>
             <label for=""><b>Description :</b></label>
             <textarea name="description" id="" cols="30" rows="10"></textarea>
-            <label for=""><b>Votre fichier :</b></label>
-            <input type="file" name="fichier">
+            <input class="filehidden" type="file" name="fichier">
+            <!-- <button type="button" class="bn633-hover bn26">Choisir un fichier</button> -->
 
 
-            <button type="submit" class="creer" name="creer">Valider les modifications</button>
-            <button id="retour">Retour</button>
+            <button type="submit" class="creer bn633-hover bn26" name="creer">Valider les modifications</button>
+            <button id="retour" class="bn633-hover bn26">Retour</button>
         </form>
         <h3 id="erreur"></h3>
-    </div>
+    </article>
 </section>
 
 <script>
