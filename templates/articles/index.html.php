@@ -12,8 +12,8 @@
             <div>
                 <h3><?= $article['titre'] ?></h3>
                 <p><?= $article['dateE'] ?><br>
-                    auteur : <?= $article['pseudo'] ?> &#149; catégorie : <?= $article['theme'] ?> <br>
-                    <a href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a>
+                    Auteur : <?= $article['pseudo'] ?> &#149; Catégorie : <?= $article['theme'] ?> <br>
+                    <button class="bn632-hover bn25"><a style="color: white;" href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a></button>
                 </p>
             </div>
         </article>
@@ -92,7 +92,7 @@
                     //const p2 = document.createElement('p');
                     const lien = document.createElement('a');
                     const saut = document.createElement('br');
-                    debugger
+
                     if (type == "image") {
                         image.src = fichier
                     } else {
@@ -102,7 +102,8 @@
                     lien.textContent = "En savoir plus"
                     nom.textContent = titre
 
-                    let text = date + "<br> " + "auteur : " + pseudo + " &#149; categorie : " + categori + "<br>" + "<a href=" + lien + "> En savoir plus"
+                    let text = date + "<br> " + "Auteur : " + pseudo + " &#149; Categorie : " + categori + "<br>" + "<button class='bn632-hover bn25'>" + "<a style='color: white;' href=" + lien + "> En savoir plus </button>"
+
                     p1.innerHTML = text
 
 
@@ -193,7 +194,7 @@
                         lien.textContent = "En savoir plus"
                         nom.textContent = titre
 
-                        let text = date + "<br> " + "auteur : " + pseudo + " &#149; categorie : " + categori + "<br>" + "<a href=" + lien + "> En savoir plus"
+                        let text = date + "<br> " + "Auteur : " + pseudo + " &#149; Categorie : " + categori + "<br>" + "<button class='bn632-hover bn25'>" + "<a style='color: white;' href=" + lien + "> En savoir plus </button>"
                         p1.innerHTML = text
 
 

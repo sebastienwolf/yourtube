@@ -58,6 +58,11 @@ header nav #filtre div {
   border-bottom: 1px solid #2F2E2E;
 }
 
+.a {
+  text-decoration: none;
+  color: #F8F9F7;
+}
+
 .bn632-hover {
   width: 100px;
   font-size: 14px;
@@ -73,6 +78,11 @@ header nav #filtre div {
   moz-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+.bn632-hover a {
+  text-decoration: none;
+  color: #F8F9F7;
 }
 
 .bn632-hover:hover {
@@ -210,6 +220,15 @@ main .profil article img {
   gap: 5px;
 }
 
+#delBack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #index {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,6 +249,7 @@ main .profil article img {
           flex-direction: column;
   width: 220px;
   border: 1px solid #8b8585;
+  height: 250px;
 }
 
 #index article img {
@@ -283,6 +303,25 @@ main .profil article img {
   color: #ffffff;
 }
 
+.oneArticle {
+  position: relative;
+  top: -70px;
+  z-index: 7;
+}
+
+.oneArticle .fichierOne {
+  width: 850px;
+  height: 500px;
+}
+
+.oneArticle div h3 {
+  font-weight: 900;
+}
+
+.oneArticle div #description {
+  font-weight: 600;
+}
+
 .formUsers {
   border: 1px solid black;
   border-radius: 15px;
@@ -331,5 +370,41 @@ main .profil article img {
 .formUsers form #retour {
   position: relative;
   top: 5px;
+}
+
+footer {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #E1E9E1;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto";
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer nav ul li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #2F2E2E;
+}
+
+footer nav ul li a svg {
+  height: 20px;
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */

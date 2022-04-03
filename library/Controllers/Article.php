@@ -49,14 +49,18 @@ class Article extends Controller
 
     public function addArticle()
     {
-        $typeAdd = htmlspecialchars(filter_input(INPUT_POST, 'type'));
+        //$typeAdd = htmlspecialchars(filter_input(INPUT_POST, 'type'));
         $titreAdd = htmlspecialchars(filter_input(INPUT_POST, 'titre'));
         $categorie = filter_input(INPUT_POST, 'categorie');
         $idUser = $_SESSION['id'];
         $description = htmlspecialchars(filter_input(INPUT_POST, 'description'));
 
 
-        if (!empty($_FILES['fichier']) && !empty($description) && !empty($typeAdd) && !empty($titreAdd) && !empty($categorie) && !empty($idUser)) {
+        //=================================================
+
+        //====================================================
+
+        if (!empty($_FILES['fichier']) && !empty($description) && !empty($titreAdd) && !empty($categorie) && !empty($idUser)) {
 
             $contenu = $_FILES['fichier']['tmp_name'];
             $size = $_FILES['fichier']['size'];
@@ -70,6 +74,12 @@ class Article extends Controller
             // end permet de prendre le dernier élement du tableau
             // strtolower = renvoie une chaine de caractere en minuscule
             $extension = strtolower(end($tableExtension));
+
+            if ($extension == 'jpg' || $extension == 'jpeg' || $extension == 'png' || $extension == 'bmp' || $extension == 'tif') {
+                $typeAdd = "image";
+            } else {
+                $typeAdd = "video";
+            }
 
 
             // type de fichier autorisé
@@ -166,7 +176,7 @@ class Article extends Controller
             $condition = "idArticle = '{$idArticle}'";
             $this->model->udapte($item, $condition);
             $this->udapteDate($idArticle);
-            echo json_encode(0);
+            echo json_encode(1);
         }
 
         //============================================================
@@ -176,7 +186,7 @@ class Article extends Controller
             $condition = "idArticle = '{$idArticle}'";
             $this->model->udapte($item, $condition);
             $this->udapteDate($idArticle);
-            echo json_encode(0);
+            echo json_encode(1);
         }
 
         //============================================================
@@ -186,7 +196,7 @@ class Article extends Controller
             $condition = "idArticle = '{$idArticle}'";
             $this->model->udapte($item, $condition);
             $this->udapteDate($idArticle);
-            echo json_encode(0);
+            echo json_encode(1);
         }
         //============================================================
         // fichier et type
@@ -249,7 +259,7 @@ class Article extends Controller
                             unlink($delete);
                         }
                         $this->udapteDate($idArticle);
-                        echo json_encode(0);
+                        echo json_encode(1);
                     } else {
                         echo json_encode(5);
                         // 5 = il y a une erreur

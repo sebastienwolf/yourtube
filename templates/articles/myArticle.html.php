@@ -12,8 +12,8 @@
             <div>
                 <h3><?= $article['titre'] ?></h3>
                 <p><?= $article['dateE'] ?><br>
-                    auteur : <?= $article['pseudo'] ?> &#149; catégorie : <?= $article['theme'] ?> <br>
-                    <a href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a>
+                    Auteur : <?= $article['pseudo'] ?> &#149; Catégorie : <?= $article['theme'] ?> <br>
+                    <button class="bn632-hover bn25"><a style="color: white;" href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a></button>
                 </p>
             </div>
         </article>

@@ -4,12 +4,12 @@
         <form id="articleAdd" action="" method="post" enctype="multipart/form-data">
             <h2>Ajouter une vidéo</h2>
 
-            <label for=""><b>Type :</b></label>
+            <!-- <label for=""><b>Type :</b></label>
             <select type="select" name="type">
                 <option value="video">Video</option>
                 <option value="image">Image</option>
-            </select>
-            <label for=""><b>titre :</b></label>
+            </select> -->
+            <label for=""><b>Titre :</b></label>
             <input type="text" name="titre" placeholder="Titre">
             <label for=""><b>Categorie :</b></label>
             <select type="select" name="categorie">
@@ -25,7 +25,7 @@
             <!-- <button type="button" class="bn633-hover bn26">Choisir un fichier</button> -->
 
 
-            <button type="submit" class="creer bn633-hover bn26" name="creer">Valider les modifications</button>
+            <button type="submit" class="creer bn633-hover bn26" name="creer">Envoyer votre article</button>
             <button id="retour" class="bn633-hover bn26">Retour</button>
         </form>
         <h3 id="erreur"></h3>

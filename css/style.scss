@@ -80,6 +80,11 @@ header {
 //=============================================================
 //===================== bouton =================================
 //=============================================================
+.a {
+    text-decoration: none;
+    color: $color1;
+}
+
 .bn632-hover {
     width: 100px;
     font-size: 14px;
@@ -96,6 +101,12 @@ header {
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+
+    a {
+        text-decoration: none;
+        color: $color1;
+    }
+
 }
 
 .bn632-hover:hover {
@@ -138,6 +149,8 @@ header {
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+
+
 }
 
 .bn633-hover:hover {
@@ -159,6 +172,7 @@ header {
             #2b5876,
             #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+
 }
 
 //=============================================================
@@ -253,9 +267,15 @@ main {
 
 
         }
+
+
     }
 }
 
+#delBack {
+    display: flex;
+    justify-content: space-between;
+}
 
 //=============================================================
 //===================== index =================================
@@ -271,6 +291,7 @@ main {
         flex-direction: column;
         width: 220px;
         border: 1px solid $color7;
+        height: 250px;
 
         img {
             width: 100%;
@@ -331,7 +352,28 @@ main {
 //=============================================================
 //===================== l'article =============================
 //=============================================================
+.oneArticle {
+    position: relative;
+    top: -70px;
+    z-index: 7;
 
+    .fichierOne {
+        width: 850px;
+        height: 500px;
+    }
+
+    div {
+        h3 {
+            font-weight: 900;
+        }
+
+        #description {
+            font-weight: 600;
+        }
+    }
+
+
+}
 
 
 //=============================================================
@@ -381,6 +423,45 @@ main {
         #retour {
             position: relative;
             top: 5px;
+        }
+    }
+}
+
+
+
+//=============================================================
+//===================== footer ================================
+//=============================================================
+footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    background: $color3;
+    height: 50px;
+    align-items: center;
+    font-family: "Roboto";
+
+    nav {
+        ul {
+            display: flex;
+
+            li {
+                list-style-type: none;
+                margin-left: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: $color4;
+
+
+                    svg {
+                        height: 20px;
+                        width: 20px;
+
+
+                    }
+                }
+            }
         }
     }
 }
