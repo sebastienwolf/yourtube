@@ -8,11 +8,14 @@
             <label for=""><b>Categorie :</b></label>
             <select type="select" name="categorie">
                 <option value="0"><?= $articles[0]['theme'] ?></option>
-                <option value="2">Enfant</option>
-                <option value="3">Moto</option>
-                <option value="4">Sport</option>
-                <option value="5">Animé</option>
-                <option value="6">Musique</option>
+                <?php
+                foreach ($themes as $theme) {
+                ?>
+                    <option value="<?= $theme['idCategorie'] ?>"><?= $theme['theme'] ?></option>
+
+                <?php
+                }
+                ?>
             </select>
             <label for=""><b>Description :</b></label>
             <textarea name="description" id="" cols="30" rows="10" placeholder="<?= $articles[0]['contenu'] ?>"></textarea>

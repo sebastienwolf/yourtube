@@ -43,6 +43,10 @@ header nav {
   position: relative;
   top: 0px;
   width: 80%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ad2626;
 }
 
 header nav #filtre form #search {
@@ -56,6 +60,13 @@ header nav #filtre div {
   height: 50px;
   border-top: 1px solid #2F2E2E;
   border-bottom: 1px solid #2F2E2E;
+}
+
+header nav #filtre .navButton {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 60px;
 }
 
 .a {
@@ -247,7 +258,7 @@ main .profil article img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 220px;
+  width: 240px;
   border: 1px solid #8b8585;
   height: 250px;
 }

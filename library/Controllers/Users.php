@@ -41,6 +41,22 @@ class Users extends Controller
             echo json_encode("3");
         }
     }
+
+
+    // ===================================================================================================
+    // ===============================        profil    ===========================================
+    // ===================================================================================================
+    public function profil()
+    {
+        $pageTitle = 'profil';
+        // ob_start();
+        // require_once('templates/articles/profil.html.php');
+        // $pageContent = ob_get_clean();
+        // require_once('templates/layout.html.php');
+        \Renderer::render('articles/profil', compact('pageTitle'));
+    }
+    //============================================================================                 
+    //============================================================================
     // inscription new user
     public function inscription()
     {
@@ -76,60 +92,68 @@ class Users extends Controller
             echo json_encode(("3"));
         }
     }
+    //    =================================================================
+    // ====================================================================
     // modifier les donnée user
+
     public function modify()
     {
+        if (!isset($_SESSION['userType'])) {
+            header('Location: index.php?controller=article&task=index');
+        } else {
 
-        $userNom = htmlspecialchars(filter_input(INPUT_POST, 'nom'));
-        $userPrenom = htmlspecialchars(filter_input(INPUT_POST, 'prenom'));
-        $userMail = filter_input(INPUT_POST, 'mail');
-        $userPseudo = htmlspecialchars(filter_input(INPUT_POST, 'userPseudo'));
-        $userPassword = htmlspecialchars(filter_input(INPUT_POST, 'password'));
-        $idUsers = $_SESSION['id'];
-        //=======================================
-        //Nom
-        if (isset($userNom)) {
-            $item = "nom = '{$userNom}'";
-            $condition = "idUsers = '{$idUsers}'";
-            $this->model->udapte($item, $condition);
-            $_SESSION['nom'] = $userNom;
-        }
-        //=======================================
-        //Prenom
-        if ($userPrenom !== "") {
-            $item = "prenom = '{$userPrenom}'";
-            $condition = "idUsers = '{$idUsers}'";
-            $this->model->udapte($item, $condition);
-            $_SESSION['prenom'] = $userPrenom;
-        }
-        //=======================================
-        //Mail
-        if ($userMail !== "") {
-            $item = "mail = '{$userMail}'";
-            $condition = "idUsers = '{$idUsers}'";
-            $this->model->udapte($item, $condition);
-            $_SESSION['mail'] = $userMail;
-        }
-        //=======================================
-        // Pseudo
-        if ($userPseudo !== "") {
-            $item = "pseudo = '{$userPseudo}'";
-            $condition = "idUsers = '{$idUsers}'";
-            $this->model->udapte($item, $condition);
-            $_SESSION['pseudo'] = $userPseudo;
-        }
-        //=======================================
-        // mot de passe
-        if ($userPassword !== "") {
-            $option = ['cost' => 12,];
-            $hash = password_hash($userPassword, PASSWORD_BCRYPT, $option);
 
-            $item = "pwd = '{$hash}'";
-            $condition = "idUsers = '{$idUsers}'";
-            $this->model->udapte($item, $condition);
-        }
-        //=======================================
+            $userNom = htmlspecialchars(filter_input(INPUT_POST, 'nom'));
+            $userPrenom = htmlspecialchars(filter_input(INPUT_POST, 'prenom'));
+            $userMail = filter_input(INPUT_POST, 'mail');
+            $userPseudo = htmlspecialchars(filter_input(INPUT_POST, 'userPseudo'));
+            $userPassword = htmlspecialchars(filter_input(INPUT_POST, 'password'));
+            $idUsers = $_SESSION['id'];
+            //=======================================
+            //Nom
+            if (isset($userNom)) {
+                $item = "nom = '{$userNom}'";
+                $condition = "idUsers = '{$idUsers}'";
+                $this->model->udapte($item, $condition);
+                $_SESSION['nom'] = $userNom;
+            }
+            //=======================================
+            //Prenom
+            if ($userPrenom !== "") {
+                $item = "prenom = '{$userPrenom}'";
+                $condition = "idUsers = '{$idUsers}'";
+                $this->model->udapte($item, $condition);
+                $_SESSION['prenom'] = $userPrenom;
+            }
+            //=======================================
+            //Mail
+            if ($userMail !== "") {
+                $item = "mail = '{$userMail}'";
+                $condition = "idUsers = '{$idUsers}'";
+                $this->model->udapte($item, $condition);
+                $_SESSION['mail'] = $userMail;
+            }
+            //=======================================
+            // Pseudo
+            if ($userPseudo !== "") {
+                $item = "pseudo = '{$userPseudo}'";
+                $condition = "idUsers = '{$idUsers}'";
+                $this->model->udapte($item, $condition);
+                $_SESSION['pseudo'] = $userPseudo;
+            }
+            //=======================================
+            // mot de passe
+            if ($userPassword !== "") {
+                $option = ['cost' => 12,];
+                $hash = password_hash($userPassword, PASSWORD_BCRYPT, $option);
 
-        echo json_encode('1');
+                $item = "pwd = '{$hash}'";
+                $condition = "idUsers = '{$idUsers}'";
+                $this->model->udapte($item, $condition);
+            }
+            //=======================================
+
+            echo json_encode('1');
+        }
     }
 }

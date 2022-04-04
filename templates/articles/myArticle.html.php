@@ -1,23 +1,27 @@
 <section id="index">
     <?php
-    foreach ($articles as $article) {
+    if (isset($articles[0]['Type'])) {
+        foreach ($articles as $article) {
     ?>
 
-        <article>
-            <?php if ($article['Type'] == "image") { ?>
-                <img src="./upload/<?= $article['imageArticle'] ?>" />
-            <?php } else { ?>
-                <video controls src="upload/<?= $article['imageArticle'] ?>">La vidéo n'a pas pu ce charger</video>
-            <?php } ?>
-            <div>
-                <h3><?= $article['titre'] ?></h3>
-                <p><?= $article['dateE'] ?><br>
-                    Auteur : <?= $article['pseudo'] ?> &#149; Catégorie : <?= $article['theme'] ?> <br>
-                    <button class="bn632-hover bn25"><a style="color: white;" href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a></button>
-                </p>
-            </div>
-        </article>
+            <article>
+                <?php if ($article['Type'] == "image") { ?>
+                    <img src="./upload/<?= $article['imageArticle'] ?>" />
+                <?php } else { ?>
+                    <video controls src="upload/<?= $article['imageArticle'] ?>">La vidéo n'a pas pu ce charger</video>
+                <?php } ?>
+                <div>
+                    <h3><?= $article['titre'] ?></h3>
+                    <p><?= $article['dateE'] ?><br>
+                        Auteur : <?= $article['pseudo'] ?> &#149; Catégorie : <?= $article['theme'] ?> <br>
+                        <button class="bn632-hover bn25"><a style="color: white;" href="index.php?controller=article&task=showOne&id=<?= $article['idArticle'] ?>">En savoir plus</a></button>
+                    </p>
+                </div>
+            </article>
 
+        <?php }
+    } else { ?>
+        <h2> Vous n'avez pas mit de vidéo.</h2>
     <?php } ?>
 
 

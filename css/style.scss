@@ -54,6 +54,11 @@ header {
         position: relative;
         top: 0px;
         width: 80%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        scrollbar-width: thin;
+        scrollbar-color: $color8;
 
         #filtre {
             form {
@@ -72,6 +77,10 @@ header {
                 border-bottom: 1px solid $color4;
             }
 
+            .navButton {
+                display: inline-flex;
+                margin-left: 60px;
+            }
         }
     }
 }
@@ -289,7 +298,7 @@ main {
     article {
         display: flex;
         flex-direction: column;
-        width: 220px;
+        width: 240px;
         border: 1px solid $color7;
         height: 250px;
 
