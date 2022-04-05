@@ -24,6 +24,14 @@
     document.getElementById('form').addEventListener('submit', event => {
         event.preventDefault();
         //let url = "index.php?controller=users&task=connexion"
+
+
+        console.log(document.cookie)
+        document.cookie = "PHPSESSID=;"
+        console.log(document.cookie)
+
+
+
         let URL = "index.php?controller=users&task=connexion"
 
         let form = document.getElementById('form')

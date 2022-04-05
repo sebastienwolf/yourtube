@@ -14,7 +14,7 @@ class Article extends Controller
 
     public function index()
     {
-
+        session_start();
         $articles = $this->model->showAllTable(1);
         $themes = $this->model->showAll("categorie");
         $pageTitle = 'Accueil';
@@ -24,7 +24,7 @@ class Article extends Controller
         // require_once('templates/layout.html.php');
 
         //avec le renderer je gere les vu la ba pour eviter de repeter le code
-        \Renderer::render('articles/index', compact('pageTitle', 'articles', 'themes'));
+        \Renderer::render('articles/index', compact('pageTitle', 'articles', 'themes',));
     }
     // ===================================================================================================
     // ===============================        myArticles    ===========================================
