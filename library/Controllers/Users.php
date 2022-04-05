@@ -18,6 +18,9 @@ class Users extends Controller
     public function connexion()
     {
         $mail = filter_input(INPUT_POST, 'mail');
+        //-----------------------------------------
+        $a = filter_input(INPUT_POST, 'password');
+        //------------------------
         $password = htmlspecialchars(filter_input(INPUT_POST, 'password'));
         if ($mail && $password) {
             $userLog = $this->model->showAll("mail = '{$mail}'");
@@ -111,7 +114,7 @@ class Users extends Controller
             $idUsers = $_SESSION['id'];
             //=======================================
             //Nom
-            if (isset($userNom)) {
+            if ($userNom !== "") {
                 $item = "nom = '{$userNom}'";
                 $condition = "idUsers = '{$idUsers}'";
                 $this->model->udapte($item, $condition);

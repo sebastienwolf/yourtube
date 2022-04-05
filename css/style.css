@@ -3,6 +3,18 @@
   src: url("./police/Futura-Light.otf") format("opentype");
 }
 
+@media screen and (min-width: 960px) {
+  .navButton {
+    width: 700px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navButton {
+    width: 1000px !important;
+  }
+}
+
 * {
   font-family: "futura";
 }
@@ -43,10 +55,6 @@ header nav {
   position: relative;
   top: 0px;
   width: 80%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #ad2626;
 }
 
 header nav #filtre form #search {
@@ -63,10 +71,19 @@ header nav #filtre div {
 }
 
 header nav #filtre .navButton {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-left: 60px;
+  position: relative;
+  width: 500px;
+}
+
+header nav #filtre .navButton .test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: thin;
 }
 
 .a {
@@ -261,8 +278,8 @@ main .profil article img {
   width: 260px;
   border: 1px solid #d3e0d3;
   height: 260px;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 #index article img {
@@ -419,5 +436,9 @@ footer nav ul li a {
 footer nav ul li a svg {
   height: 20px;
   width: 20px;
+}
+
+#titreCards {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

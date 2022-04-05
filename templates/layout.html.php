@@ -39,14 +39,15 @@ session_start();
                     <!-- &darr;   fleche bas -->
                     <!-- &uarr;   fleche haut -->
                     <div class="navButton">
-                        <button id="date" class="filtre bn632-hover bn25" data-id="dateUp">Date &darr;</button>
+                        <div class="test">
+                            <button id="date" class="filtre bn632-hover bn25" data-id="dateUp">Date &darr;</button>
 
-                        <?php foreach ($themes as $theme) {
-                        ?>
-                            <button class="filtre bn632-hover bn25" data-id="<?= $theme['idCategorie'] ?>"><?= $theme['theme'] ?></button>
-                        <?php } ?>
+                            <?php foreach ($themes as $theme) {
+                            ?>
+                                <button class="filtre bn632-hover bn25" data-id="<?= $theme['idCategorie'] ?>"><?= $theme['theme'] ?></button>
+                            <?php } ?>
+                        </div>
                     </div>
-
                 </div>
             </nav>
         <?php } ?>
