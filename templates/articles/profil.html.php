@@ -74,6 +74,7 @@
                 // ".reload" recharge la page
                 location.reload()
 
+
             })
     })
 </script>

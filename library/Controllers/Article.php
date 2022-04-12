@@ -38,13 +38,14 @@ class Article extends Controller
             $id = $_SESSION['id'];
             $i = "articles.idUsers = $id";
             $articles = $this->model->showAllTable($i);
+            $themes = $this->model->showAll("categorie");
 
             $pageTitle = 'mes articles';
             // ob_start();
             // require_once('templates/articles/myArticle.html.php');
             // $pageContent = ob_get_clean();
             // require_once('templates/layout.html.php');
-            \Renderer::render('articles/myArticle', compact('pageTitle', 'articles', 'i'));
+            \Renderer::render('articles/myArticle', compact('pageTitle', 'articles', 'i', 'themes'));
         }
     }
 
@@ -350,6 +351,11 @@ class Article extends Controller
                 $condition = "users.pseudo = '$search'";
             }
         }
+        if ($id == "image" || $id == "video") {
+
+            $condition = "articles.Type = '{$id}' ";
+        }
+
 
 
         $response = $this->model->showAllTable($condition);

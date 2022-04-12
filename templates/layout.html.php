@@ -26,21 +26,29 @@ session_start();
         </div>
         <?php
         $nav = filter_input(INPUT_GET, "task");
-        if ($nav == "index") {
+        if ($nav == "index" ||  $nav == "myArticles" || !isset($nav)) {
         ?>
 
             <nav>
                 <div id="filtre">
-                    <form id="search" action="" method="post">
-                        <input type="search" name="search" id="search">
-                        <input class="bn632-hover bn25" type="submit" value="Search">
-                    </form>
+                    <?php
+                    if ($nav == "index" || !isset($nav)) {
+                    ?>
+                        <form id="search" action="" method="post">
+                            <input type="search" name="search" id="search">
+                            <input class="bn632-hover bn25" type="submit" value="Search">
+                        </form>
+                    <?php
+                    } ?>
 
                     <!-- &darr;   fleche bas -->
                     <!-- &uarr;   fleche haut -->
                     <div class="navButton">
                         <div class="test">
                             <button id="date" class="filtre bn632-hover bn25" data-id="dateUp">Date &darr;</button>
+                            <button id="image" class="filtre bn632-hover bn25" data-id="image">Image </button>
+                            <button id="video" class="filtre bn632-hover bn25" data-id="video">Video </button>
+
 
                             <?php foreach ($themes as $theme) {
                             ?>

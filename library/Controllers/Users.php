@@ -14,6 +14,10 @@ class Users extends Controller
         session_destroy();
         header('location: index.php?controller=article&task=index');
     }
+    // ===================================================================================================
+    // ===============================        connexion    ===========================================
+    // ===================================================================================================
+
     // connexion user
     public function connexion()
     {
@@ -36,6 +40,7 @@ class Users extends Controller
                 $_SESSION['mail'] = $userLog[0]['mail'];
                 $_SESSION['userType'] = $userLog[0]['status'];
 
+                //connecter
                 echo json_encode("1");
             } else {
                 echo json_encode("2");
