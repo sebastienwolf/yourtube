@@ -9,4 +9,4 @@ Contraintes pour tous : - Rapport journalier, bien indenté et commenté.
 Vous pouvez travailler en groupe, en binôme ou seul(e).
 Les livrables doivent être déposés sur le serveur dans votre environnement FTP dans un dossier Projet\Yourtube.
 
-(en cours de finalisation css)
+https://training-yourtube.herokuapp.com/index.php
