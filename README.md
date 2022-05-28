@@ -1,5 +1,7 @@
 # yourtube
 
+http://sebblog.alwaysdata.net/
+
 Sujet : Site YourTube
 Contexte : On vous propose de créer une application web qui se veut concurrente, dans les prochaines années, de Pinterest & Dailymotion. 
 À vous d’imaginer la charte graphique, de maquetter et de développer les prémices de cette application en devenir.
@@ -8,5 +10,3 @@ Compétences requises ou à développées : - Technologies Web (HTML, Javascript
 Contraintes pour tous : - Rapport journalier, bien indenté et commenté.
 Vous pouvez travailler en groupe, en binôme ou seul(e).
 Les livrables doivent être déposés sur le serveur dans votre environnement FTP dans un dossier Projet\Yourtube.
-
-https://training-yourtube.herokuapp.com/index.php
