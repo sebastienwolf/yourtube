@@ -9,4 +9,8 @@ Travail à Réaliser : - Créer la charte graphique (simplifier) et maquetter vo
 Compétences requises ou à développées : - Technologies Web (HTML, Javascript, AJAX, PHP, CSS, Bootstrap) - Serveur Web, base de données SQL, PHP – GitHub. 
 Contraintes pour tous : - Rapport journalier, bien indenté et commenté.
 Vous pouvez travailler en groupe, en binôme ou seul(e).
-Les livrables doivent être déposés sur le serveur dans votre environnement FTP dans un dossier Projet\Yourtube.
+Les livrables doivent être déposés sur le serveur dans votre environnement FTP dans un dossier Projet\Yourtube.  
+  
+Instalation :  
+Télécharger et déziper sur le www de appache ou ailleurs si vous voulez le lancer en local.  
+installer la base de donnée qui ce trouve dans le dossier "database"
